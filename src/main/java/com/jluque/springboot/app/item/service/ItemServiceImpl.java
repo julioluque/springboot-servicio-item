@@ -28,7 +28,7 @@ public class ItemServiceImpl implements ItemService {
 	@Override
 	public List<Item> findAll() {
 		List<Producto> productos = Arrays
-				.asList(clienteRest.getForObject("http://localhost:8001/listar", Producto[].class));
+				.asList(clienteRest.getForObject("http://servicio-productos/listar", Producto[].class));
 		log.info("Metodo listar. Usando rest template");
 		// retornar productos, no es compatibe, por eso convertimos productos en item...
 		return productos.stream().map(p -> new Item(p, 1)).collect(Collectors.toList());
@@ -39,7 +39,7 @@ public class ItemServiceImpl implements ItemService {
 		log.info("Metodo ver y cantidad. Usando rest template");
 		Map<String, String> pathVariables = new HashMap<String, String>();
 		pathVariables.put("id", id.toString());
-		Producto producto = clienteRest.getForObject("http://localhost:8001/ver/{id}", Producto.class, pathVariables);
+		Producto producto = clienteRest.getForObject("http://servicio-productos/ver/{id}", Producto.class, pathVariables);
 		return new Item(producto, cantidad);
 	}
 
