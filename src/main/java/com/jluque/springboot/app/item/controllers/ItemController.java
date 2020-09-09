@@ -15,7 +15,7 @@ import com.jluque.springboot.app.item.service.ItemService;
 public class ItemController {
 
 	@Autowired
-	@Qualifier("restTemplate")
+	@Qualifier("serviceFeign")
 	private ItemService itemService;
 
 	@GetMapping("/listar")
