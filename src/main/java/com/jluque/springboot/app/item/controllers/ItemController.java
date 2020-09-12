@@ -32,6 +32,7 @@ public class ItemController {
 	}
 
 	public Item metodoAlternativo(Long id, Integer cantidad) {
+		
 		Item item = new Item();
 		Producto producto = new Producto();
 
