@@ -14,7 +14,6 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.client.RestTemplate;
 
 import com.jluque.springboot.app.item.model.Item;
@@ -63,17 +62,20 @@ public class ItemServiceImpl implements ItemService {
 	public Producto update(Producto producto, Long id) {
 		Map<String, String> pathVariable = new HashMap<String, String>();
 		pathVariable.put("id", id.toString());
-		
+
 		HttpEntity<Producto> body = new HttpEntity<Producto>(producto);
 		ResponseEntity<Producto> response = clienteRest.exchange("http://servicio-productos/editar/{id}",
 				HttpMethod.PUT, body, Producto.class, pathVariable);
 
-		return null;
+		return response.getBody();
 	}
 
 	@Override
 	public void delete(Long id) {
-		// TODO Auto-generated method stub
+
+		Map<String, String> pathVariable = new HashMap<String, String>();
+		pathVariable.put("id", id.toString());
+		clienteRest.delete("http://servicio-producto/eliminar/{id}", pathVariable);
 
 	}
 
