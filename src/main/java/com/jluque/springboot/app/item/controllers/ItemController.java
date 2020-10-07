@@ -37,7 +37,7 @@ public class ItemController {
 	private Environment env;
 
 	@Autowired
-	@Qualifier("serviceFeign")
+	@Qualifier("restTemplate")
 	private ItemService itemService;
 
 	@Value("${configuracion.texto}")
@@ -97,7 +97,7 @@ public class ItemController {
 		return itemService.update(producto, id);
 	}
 
-	@DeleteMapping("/eliminar/{id}")
+	@DeleteMapping("/borrar/{id}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void eliminar(@PathVariable Long id) {
 		itemService.delete(id);
