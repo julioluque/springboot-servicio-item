@@ -22,8 +22,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.jluque.springboot.app.commons.models.entity.Producto;
 import com.jluque.springboot.app.item.model.Item;
-import com.jluque.springboot.app.item.model.Producto;
 import com.jluque.springboot.app.item.service.ItemService;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 

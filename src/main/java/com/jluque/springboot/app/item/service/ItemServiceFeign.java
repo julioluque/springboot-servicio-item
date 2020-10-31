@@ -9,9 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
+import com.jluque.springboot.app.commons.models.entity.Producto;
 import com.jluque.springboot.app.item.clientes.ProductoClienteRest;
 import com.jluque.springboot.app.item.model.Item;
-import com.jluque.springboot.app.item.model.Producto;
 
 @Service("serviceFeign")
 @Primary

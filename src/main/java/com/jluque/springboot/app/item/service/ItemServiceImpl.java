@@ -18,8 +18,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.jluque.springboot.app.commons.models.entity.Producto;
 import com.jluque.springboot.app.item.model.Item;
-import com.jluque.springboot.app.item.model.Producto;
 
 @Service("restTemplate")
 @Primary

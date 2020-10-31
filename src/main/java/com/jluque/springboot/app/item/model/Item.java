@@ -1,5 +1,7 @@
 package com.jluque.springboot.app.item.model;
 
+import com.jluque.springboot.app.commons.models.entity.Producto;
+
 public class Item {
 
 	private Producto producto;

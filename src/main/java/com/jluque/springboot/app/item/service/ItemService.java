@@ -2,8 +2,8 @@ package com.jluque.springboot.app.item.service;
 
 import java.util.List;
 
+import com.jluque.springboot.app.commons.models.entity.Producto;
 import com.jluque.springboot.app.item.model.Item;
-import com.jluque.springboot.app.item.model.Producto;
 
 public interface ItemService {
 
